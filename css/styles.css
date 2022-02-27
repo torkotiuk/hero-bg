@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid green;
+}
+
+.header,
+.footer {
+  height: 100px;
+  background-color: rgb(175, 219, 255);
+}
+
+.overlay-container {
+  outline: 3px solid red;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* background-image: url('../images/hero-desktop.jpg'); */
+
+  background-image: 
+  
+  /* necessary upper gradient*/ linear-gradient(
+      to right,
+      rgb(255, 0, 0, 0.3),
+      rgb(0, 0, 255, 0.3)
+    ),
+    /* bg image under gradient */ url('../images/hero-mobile.jpg'),
+    /* reserve bg in case of pic couldn't be downloaded */
+      linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 255));
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  font-size: 64px;
+  color: #fff;
+}
