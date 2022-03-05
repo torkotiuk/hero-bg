@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid green;
+}
+
+.header,
+.footer {
+  height: 100px;
+  background-color: rgb(175, 219, 255);
+}
+
+.title {
+  font-size: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header-link {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 20px;
+  font-size: 24px;
+  background-color: rgb(163, 192, 255);
+}
+
+.current {
+  background-color: rgb(154, 66, 255);
+  color: red;
+  /* font-weight: 700; */
+}

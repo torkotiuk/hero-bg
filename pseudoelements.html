@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoelements</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/peudoelement.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header-link" href="./index.html">Main - bg-image for hero</a>
+        <a class="header-link current" href="./pseudoelements.html"
+          >Pseudoelements</a
+        >
+      </div>
+    </header>
+
+    <!-- Example 1 - pseudoelelemnt example - icon for button -->
+    <section class="section">
+      <div class="container">
+        <h1>Example 1</h1>
+        <!--  -->
+        <!-- Approach 1 - without pseudoelement-->
+        <!-- <a class="button">
+          <span class="icon"></span>
+          Quick start
+        </a> -->
+
+        <!--  -->
+        <!-- Approach 2 -->
+        <a class="button">
+          <!--  tag span in approach 1 wasn't look good in html, that's why pseudoelement exists-->
+          Quick start
+        </a>
+        <!--  -->
+        <!--  -->
+      </div>
+    </section>
+
+    <!-- Example 2 - pseudoelement example - icon in some card -->
+    <section class="section">
+      <div class="container">
+        <h1>Example 2</h1>
+
+        <!-- card -->
+        <ul class="list">
+          <li class="card icon-astronaut">
+            <h2>Hello world!</h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus nulla modi placeat porro a nobis alias ea odit
+              voluptatum in inventore, dolor rem quidem aut, deserunt
+              consequuntur, esse veniam ad?
+            </p>
+          </li>
+          <li class="card icon-clock">
+            <h2>Hello world!</h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus nulla modi placeat porro a nobis alias ea odit
+              voluptatum in inventore, dolor rem quidem aut, deserunt
+              consequuntur, esse veniam ad?
+            </p>
+          </li>
+        </ul>
+        <!--  -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <h2>Footer</h2>
+      </div>
+    </footer>
+  </body>
+</html>
