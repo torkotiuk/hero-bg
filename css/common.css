@@ -29,14 +29,24 @@
   padding-bottom: 50px;
 }
 
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
 .header-link {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 20px 20px;
+  margin-right: 20px;
   font-size: 24px;
   background-color: rgb(163, 192, 255);
+}
+
+.github-link {
+  margin-left: auto;
 }
 
 .current {
