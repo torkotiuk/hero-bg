@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector graphics</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/vector-graphic.css" />
+    <style>
+      .grab {
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+
+      .cell {
+        cursor: cell;
+      }
+
+      .url {
+        cursor: url(myBall.cur), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header-link" href="./index.html">Main - bg-image for hero</a>
+        <a class="header-link" href="./pseudoelements.html">Pseudoelements</a>
+        <a class="current header-link" href="./vector-graphic.html"
+          >Vector graphics</a
+        >
+
+        <!-- github -->
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://github.com/torkotiuk/hero-bg"
+        >
+          <svg width="30" height="38" style="fill: rgb(138, 138, 138)">
+            <use href="./images/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-vector">
+      <div class="container">
+        <h1 class="title">Vector graphics</h1>
+
+        <h2>SVG image</h2>
+        <ol class="main-vector__list">
+          <li>Find icon on f.e. icomoon.io</li>
+          <li>Press "Get code" under icon</li>
+          <li>
+            Copy "Symbol definition(s)" from &lt;symbol&gt; to &lt;symbol&gt; to
+            your sprite.svg
+          </li>
+          <li>
+            Put the next line to your html:
+            <ul>
+              <li>
+                &lt;svg&gt; width="24" height="16" aria-label="Facebook icon">
+                &lt;use class="icon-menu"
+                href="./images/sprite.svg#icon-menu"&gt;&lt;/use&gt;
+                &lt;/svg&gt;
+              </li>
+            </ul>
+            - where <b>#icon-menu</b> is <b>id</b> from sprite.svg
+          </li>
+          <li>Style this svg according to class="icon-menu"</li>
+        </ol>
+
+        <!-- --------------------------------- -->
+        <!-- --------------------------------- -->
+        <!-- ----------- EXAMPLE ------------- -->
+        <svg class="fb-icon grab" aria-label="Facebook icon">
+          <use href="./images/sprite.svg#icon-facebook"></use>
+        </svg>
+
+        <svg class="icon-clubs cell" width="80" height="80">
+          <use href="./images/sprite.svg#icon-clubs"></use>
+        </svg>
+
+        <!-- --------------------------------- -->
+        <!-- --------------------------------- -->
+        <!-- --------------------------------- -->
+
+        <h3>Additional info:</h3>
+        <ul class="main-vector__list">
+          <li>
+            <a target="_blank" href="http://css.yoksel.ru/svg-fill-and-stroke/"
+              >SVG values - stroke, width, linecap & dasharray</a
+            >
+          </li>
+          <li>
+            If we get svg-s from f.e. Adobe Ilustrator we should optimize svg
+            with service
+            <a target="_blank" href="https://xerocho.github.io/svgomg/"
+              >svgomg</a
+            >
+            --- (
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=960s"
+              >SVGOMG service explanation on webinar</a
+            >
+            )
+          </li>
+        </ul>
+
+        <h3>SVG sprite:</h3>
+        <p>Usual sprite DON'T use as a <b>background image</b></p>
+        <p>
+          For trying to use sprite as a background image watch
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3000s"
+            >webinar</a
+          >
+        </p>
+        <p>
+          Explanation (usually in case when we don't have content, f. e. Login
+          icon)
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3420s"
+            >Arial-label for svg icons</a
+          >
+        </p>
+        <ol class="main-vector__list main-vector__list--mb0">
+          <li></li>
+        </ol>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <h2>Footer</h2>
+      </div>
+    </footer>
+  </body>
+</html>

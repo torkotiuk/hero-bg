@@ -24,6 +24,20 @@
   color: #fff;
 }
 
+.main-vector .title {
+  color: #2c2c2c;
+}
+
+.main-vector__list {
+  margin-bottom: 50px;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.main-vector__list--mb0 {
+  margin-bottom: 0px;
+}
+
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -47,6 +61,10 @@
 
 .github-link {
   margin-left: auto;
+}
+
+.github-link:hover .github-icon {
+  fill: rgb(154, 66, 255);
 }
 
 .current {
