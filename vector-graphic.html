@@ -37,7 +37,7 @@
           target="_blank"
           href="https://github.com/torkotiuk/hero-bg"
         >
-          <svg width="30" height="38" style="fill: rgb(138, 138, 138)">
+          <svg class="github-icon" width="30" height="38">
             <use href="./images/sprite.svg#icon-github"></use>
           </svg>
         </a>
@@ -74,14 +74,20 @@
         <!-- --------------------------------- -->
         <!-- --------------------------------- -->
         <!-- ----------- EXAMPLE ------------- -->
-        <svg class="fb-icon grab" aria-label="Facebook icon">
-          <use href="./images/sprite.svg#icon-facebook"></use>
-        </svg>
+        <span class="link-or-btn">
+          <!-- For case when icon could not be displayed-->
+          <span class="visually-hidden" style="outline: 1px solid red"
+            >Facebook icon</span
+          >
+          <!-- --- --- --- --- --- --- --- --- --- --- -->
+          <svg class="fb-icon grab" aria-label="Facebook icon">
+            <use href="./images/sprite.svg#icon-facebook"></use>
+          </svg>
+        </span>
 
         <svg class="icon-clubs cell" width="80" height="80">
           <use href="./images/sprite.svg#icon-clubs"></use>
         </svg>
-
         <!-- --------------------------------- -->
         <!-- --------------------------------- -->
         <!-- --------------------------------- -->
@@ -89,48 +95,88 @@
         <h3>Additional info:</h3>
         <ul class="main-vector__list">
           <li>
+            <a
+              target="_blank"
+              href="https://app.schoology.com/course/2603776759/materials/gp/2912141837"
+              >Style different colors in svg
+            </a>
+          </li>
+          <li>
             <a target="_blank" href="http://css.yoksel.ru/svg-fill-and-stroke/"
               >SVG values - stroke, width, linecap & dasharray</a
             >
           </li>
+
           <li>
             If we get svg-s from f.e. Adobe Ilustrator we should optimize svg
             with service
             <a target="_blank" href="https://xerocho.github.io/svgomg/"
-              >svgomg</a
+              >SVGOMG</a
             >
             --- (
             <a
               target="_blank"
               href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=960s"
-              >SVGOMG service explanation on webinar</a
+              >svgomg service explanation on WEBINAR</a
             >
             )
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="link"
+              href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3420s"
+              >Explanation in webinar (usually in case when we don't have
+              content, f. e. Login icon) - <b>Arial-label</b> for svg icons;</a
+            >
+            <p>
+              <a
+                target="_blank"
+                class="link"
+                href="https://moderncss.dev/icon-button-css-styling-guide/"
+                >Moderncss.dev/icon-button-css;</a
+              >
+            </p>
+          </li>
+          <li>
+            <span>
+              <a
+                target="_blank"
+                class="link"
+                href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3570s"
+                >Teacher visually hidden</a
+              >
+            </span>
+            <span>
+              or my one in this page repository
+              <!-- github -->
+              <a
+                class="github-link"
+                target="_blank"
+                href="https://github.com/torkotiuk/hero-bg"
+              >
+                <svg class="github-icon" width="30" height="38">
+                  <use href="./images/sprite.svg#icon-github"></use>
+                </svg>
+              </a>
+            </span>
+            <!-- ----- -->
           </li>
         </ul>
 
         <h3>SVG sprite:</h3>
-        <p>Usual sprite DON'T use as a <b>background image</b></p>
-        <p>
-          For trying to use sprite as a background image watch
-          <a
-            target="_blank"
-            href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3000s"
-            >webinar</a
-          >
-        </p>
-        <p>
-          Explanation (usually in case when we don't have content, f. e. Login
-          icon)
-          <a
-            target="_blank"
-            href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3420s"
-            >Arial-label for svg icons</a
-          >
-        </p>
-        <ol class="main-vector__list main-vector__list--mb0">
-          <li></li>
-        </ol>
+        <ul class="main-vector__list main-vector__list--mb0">
+          <li>DON'T use usual sprite as a <b>background image</b></li>
+
+          <li>
+            For trying to use sprite as a background image watch
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=GmEY7lL7YXE&t=3000s"
+              >webinar</a
+            >
+          </li>
+        </ul>
       </div>
     </main>
 
