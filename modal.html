@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/close-btn.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header-link" href="./index.html">Main - bg-image for hero</a>
+        <a class="header-link" href="./pseudoelements.html">Pseudoelements</a>
+        <a class="header-link" href="./vector-graphic.html">Vector graphics</a>
+        <a class="header-link" href="./positioning.html">Positioning</a>
+        <a class="current header-link" href="./modal.html">Modal</a>
+
+        <!-- github -->
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://github.com/torkotiuk/hero-bg"
+        >
+          <svg class="github-icon" width="30" height="38">
+            <use href="./images/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+        <!-- ------ -->
+      </div>
+    </header>
+    <main class="main-modal">
+      <div class="container">
+        <h1 class="title">Modal</h1>
+        <button type="button" class="modal-open-btn" data-open-modal>
+          Open modal
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <h2>Footer</h2>
+      </div>
+    </footer>
+
+    <div class="backdrop backdrop--is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="close-btn" data-close-modal>&#10539;</button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi
+          repudiandae vero maiores delectus, odio amet? Dolor error est earum
+          delectus veniam labore nostrum quod repudiandae laudantium, optio
+          perferendis dolorem. Aliquam ex nulla ipsam facilis error accusamus
+          repudiandae qui fugit placeat reprehenderit, numquam, soluta
+          voluptate. Nesciunt cupiditate saepe soluta provident?
+        </p>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

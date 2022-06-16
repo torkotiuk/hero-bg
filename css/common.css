@@ -14,7 +14,7 @@
 
 .header,
 .footer {
-  height: 100px;
+  /* height: 100px; */
   background-color: rgb(175, 219, 255);
 }
 
@@ -37,7 +37,8 @@ a:hover {
 }
 
 .main-vector .title,
-.positioning .title {
+.positioning .title,
+.main-modal .title {
   color: #2c2c2c;
 }
 
@@ -99,4 +100,27 @@ a:hover {
 .link-or-btn {
   outline: 1px solid red;
   width: 0;
+}
+
+/* modal additional styles*/
+.main-modal .container {
+  background-color: rgb(222, 255, 222);
+  height: 800px;
+}
+
+.modal-open-btn {
+  padding: 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  color: #fff;
+  background-color: tomato;
+  cursor: pointer;
+  transition: 250ms color linear, 250ms background-color linear;
+}
+
+.modal-open-btn:hover {
+  color: tomato;
+  background-color: rgb(247, 247, 247);
+  border: 1px solid tomato;
 }

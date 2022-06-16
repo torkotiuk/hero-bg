@@ -1,0 +1,22 @@
+/* add body-top padding automatically by --body-height-auto.js-- */
+/* body {
+  padding-top: 67px;
+} */
+/* --------------------------- */
+/* 1. Change height in header1 */
+/* 2. body-height-auto.js changed automatically padding-top in header */
+
+.header1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(133, 186, 255, 0.5);
+  z-index: 1;
+}
+
+.header1 .container {
+  display: flex;
+  align-items: center;
+}
