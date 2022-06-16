@@ -1,0 +1,51 @@
+.product {
+  display: inline-block;
+  box-shadow: 1px 7px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.product:hover .product__actions {
+  opacity: 1;
+}
+
+.product__thumb {
+  position: relative;
+}
+
+.product__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  outline: 2px solid orange;
+
+  opacity: 0;
+  transition: 500ms opacity linear;
+}
+
+.product__icon {
+  outline: 1px solid #2a2a2a;
+  background-color: #f0ebeb;
+}
+
+.product__descr {
+  padding: 10px;
+}
+
+/* Overlay making --- BEGIN */
+.product__thumb::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 115, 0, 0.5);
+  opacity: 0;
+  transition: 500ms opacity linear;
+}
+
+.product__thumb:hover::before {
+  opacity: 1;
+}
+/* Overlay making --- END */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/positioning.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header-link" href="./index.html">Main - bg-image for hero</a>
+        <a class="header-link" href="./pseudoelements.html">Pseudoelements</a>
+        <a class="header-link" href="./vector-graphic.html">Vector graphics</a>
+        <a class="current header-link" href="./positioning.html">Positioning</a>
+
+        <!-- github -->
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://github.com/torkotiuk/hero-bg"
+        >
+          <svg class="github-icon" width="30" height="38">
+            <use href="./images/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="positioning">
+      <div class="container">
+        <h1 class="title">Positioning</h1>
+
+        <!-- --- --- Example --- --- -->
+        <div class="product">
+          <div class="product__thumb">
+            <img
+              src="https://picsum.photos/200/300"
+              alt="Random picsum image"
+              width="350"
+              height="400"
+            />
+            <div class="product__actions">
+              <svg width="50" height="50" class="product__icon">
+                <use href="./images/sprite.svg#icon-home"></use>
+              </svg>
+              <svg width="50" height="50" class="product__icon">
+                <use href="./images/sprite.svg#icon-pencil"></use>
+              </svg>
+              <svg width="50" height="50" class="product__icon">
+                <use href="./images/sprite.svg#icon-star"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="product__descr">
+            <h2>Product 1</h2>
+            <span>Price:</span>
+            <span>300 pln.</span>
+          </div>
+        </div>
+        <!-- --- --- --- --- --- --- -->
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <h2>Footer</h2>
+        <p style="padding: 20px; font-size: 26px">
+          Add link from
+          <a target="_blank" href="https://picsum.photos/">picsum</a> for random
+          pic
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
