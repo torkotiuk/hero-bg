@@ -73,26 +73,38 @@
           <li>Style this svg according to class="icon-menu"</li>
         </ol>
 
-        <!-- --------------------------------- -->
-        <!-- --------------------------------- -->
-        <!-- ----------- EXAMPLE ------------- -->
-        <span class="link-or-btn">
-          <!-- For case when icon could not be displayed-->
-          <span class="visually-hidden" style="outline: 1px solid red"
-            >Facebook icon</span
-          >
-          <!-- --- --- --- --- --- --- --- --- --- --- -->
-          <svg class="fb-icon grab" aria-label="Facebook icon">
-            <use href="./images/sprite.svg#icon-facebook"></use>
-          </svg>
-        </span>
+        <div
+          class="example"
+          style="
+            border: 3px solid rgb(153, 252, 153);
+            padding: 10px;
+            text-align: center;
+          "
+        >
+          <h2 style="text-align: center">EXAMPLE</h2>
+          <!-- --------------------------------- -->
+          <!-- --------------------------------- -->
+          <!-- ----------- EXAMPLE ------------- -->
+          <!-- Ex. 1 - FB icon-->
+          <span class="link-or-btn">
+            <!-- For case when icon could not be displayed-->
+            <span class="visually-hidden" style="outline: 1px solid red"
+              >Facebook icon</span
+            >
+            <!-- --- --- --- --- --- --- --- --- --- --- -->
+            <svg class="fb-icon grab" aria-label="Facebook icon">
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </span>
 
-        <svg class="icon-clubs cell" width="80" height="80">
-          <use href="./images/sprite.svg#icon-clubs"></use>
-        </svg>
-        <!-- --------------------------------- -->
-        <!-- --------------------------------- -->
-        <!-- --------------------------------- -->
+          <!-- Ex. 2 - cross card icon-->
+          <svg class="icon-clubs cell" width="80" height="80">
+            <use href="./images/sprite.svg#icon-clubs"></use>
+          </svg>
+          <!-- --------------------------------- -->
+          <!-- --------------------------------- -->
+          <!-- --------------------------------- -->
+        </div>
 
         <h3>Additional info:</h3>
         <ul class="main-vector__list">
@@ -163,6 +175,12 @@
               </a>
             </span>
             <!-- ----- -->
+          </li>
+          <li>
+            Don't use svg file in &lt;img&gt; tag, BUT easy use svg as a
+            background, like in Example 2 of
+            <a href="./pseudoelements.html">"PSEUDOELEMENTS"</a> TAB of this
+            site (astronaut & clock as a background images).
           </li>
         </ul>
 
