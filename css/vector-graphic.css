@@ -1,15 +1,18 @@
 .fb-icon {
   outline: 1px solid green;
   fill: blue;
+  /* fill-opacity: 0.8; */
+  stroke: yellowgreen;
+  stroke-width: 2;
 }
 .fb-icon:hover {
   fill: rgb(1, 1, 175);
+  stroke: rgb(163, 245, 0);
 }
 
 .icon-clubs {
   padding: 10px;
   background-color: #dfdfdf;
-  /* fill: aliceblue; */
   cursor: pointer;
   border-radius: 20px;
 }

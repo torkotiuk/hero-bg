@@ -1,0 +1,55 @@
+.button {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-size: 36px;
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: pink;
+  color: green;
+}
+
+.button::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  outline: 1px solid black;
+
+  background-image: url('../images/rocket-icon.png');
+  background-size: contain;
+
+  transition: transform 250ms linear;
+}
+
+.button:hover::before {
+  transform: translateY(-50px);
+}
+
+.button::after {
+  position: absolute;
+
+  content: '';
+  width: 30px;
+  height: 30px;
+
+  outline: 1px solid black;
+  background-color: green;
+
+  transform: translateY(50px);
+  transition: transform 250ms linear;
+}
+
+.button:hover::after {
+  transform: translateY(0);
+}

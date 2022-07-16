@@ -57,36 +57,6 @@ a:hover {
   padding-bottom: 50px;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header-link {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  /* display: inline-block; */
-  padding: 20px 20px;
-  margin-right: 20px;
-  font-size: 24px;
-  background-color: rgb(163, 192, 255);
-}
-
-.github-link {
-  margin-left: auto;
-}
-
-.github-link:hover .github-icon {
-  fill: rgb(154, 66, 255);
-}
-
-.current {
-  background-color: rgb(154, 66, 255);
-  color: red;
-  /* font-weight: 700; */
-}
-
 .visually-hidden {
   position: absolute;
   height: 1px;
@@ -116,6 +86,7 @@ a:hover {
   color: #fff;
   background-color: tomato;
   cursor: pointer;
+
   transition: 250ms color linear, 250ms background-color linear;
 }
 
