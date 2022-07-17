@@ -1,0 +1,43 @@
+.product {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 1px 7px 24px 0px rgba(66, 68, 90, 1);
+  overflow: hidden;
+}
+
+.product__thumb {
+  position: relative;
+}
+
+.product__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 250ms linear 250ms;
+}
+
+/* Overlay making --- BEGIN */
+.product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 115, 0, 0.5);
+  transform: translateX(-100%);
+
+  transition: transform 250ms linear;
+}
+
+.product:hover .product__overlay {
+  transform: translateX(0%);
+}
+.product:hover .product__actions {
+  opacity: 1;
+}
+/* Overlay making --- END */

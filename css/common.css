@@ -26,20 +26,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.8;
-}
-
 .title {
+  margin-top: 20px;
   font-size: 64px;
   text-align: center;
-  color: #fff;
+  color: #2c2c2c;
 }
 
-.main-vector .title,
-.positioning .title,
-.main-modal .title {
-  color: #2c2c2c;
+.hero .title {
+  color: white;
 }
 
 .main-vector__list {

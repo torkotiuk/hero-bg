@@ -7,7 +7,10 @@
     <title>Animation</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
-    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/animation-ex1.css" />
+    <link rel="stylesheet" href="./css/animation-ex2.css" />
+    <link rel="stylesheet" href="./css/animation-ex3.css" />
+    <link rel="stylesheet" href="./css/animation-ex3-additional-style.css" />
   </head>
   <body>
     <header class="header">
@@ -32,21 +35,99 @@
       </div>
     </header>
 
+    <h1 class="title">Animation</h1>
+
     <section class="section">
       <div class="container">
         <p style="font-size: 42px; text-align: center; color: #2c2c2c">
           Example 1 - button with icon, <b>one icon is changing with another</b>
         </p>
-        <div style="padding-top: 40px; padding-bottom: 40px">
-          <!-- ------- ------- ------- -->
-          <!-- ------- ------- ------- -->
-          <!-- ------- ------- ------- -->
-          <!-- ------- EXAMPLE ------- -->
-          <a class="button"> Quick start </a>
-          <!-- ------- ------- ------- -->
-          <!-- ------- ------- ------- -->
-          <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- EXAMPLE 1 ----- -->
+        <a class="button"> Quick start </a>
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+
+        <p
+          style="
+            font-size: 42px;
+            text-align: center;
+            color: #2c2c2c;
+            margin-top: 40px;
+            margin-bottom: 20px;
+          "
+        >
+          Example 2 - some underline on list items
+        </p>
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- EXAMPLE 2 ----- -->
+        <ul class="menu list">
+          <li class="menu__item">
+            <a class="menu__link" href="">Blog</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Profile</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Gallery</a>
+          </li>
+        </ul>
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+
+        <p
+          style="
+            font-size: 42px;
+            text-align: center;
+            color: #2c2c2c;
+            margin-top: 40px;
+            margin-bottom: 20px;
+          "
+        >
+          Example 3 - animation for card overlay
+        </p>
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- EXAMPLE 3 ----- -->
+        <div class="product">
+          <div class="product__thumb">
+            <img
+              src="https://picsum.photos/200/300"
+              alt="Random picsum image"
+              width="350"
+              height="400"
+            />
+            <div class="product__overlay">
+              <div class="product__actions">
+                <svg width="50" height="50" class="product__icon">
+                  <use href="./images/sprite.svg#icon-home"></use>
+                </svg>
+                <svg width="50" height="50" class="product__icon">
+                  <use href="./images/sprite.svg#icon-pencil"></use>
+                </svg>
+                <svg width="50" height="50" class="product__icon">
+                  <use href="./images/sprite.svg#icon-star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__descr">
+            <h2>Product 1</h2>
+            <span>Price:</span>
+            <span>300 pln.</span>
+          </div>
         </div>
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
+        <!-- ------- ------- ------- -->
       </div>
     </section>
 
