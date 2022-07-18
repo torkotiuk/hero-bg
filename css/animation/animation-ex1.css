@@ -27,7 +27,7 @@
   height: 30px;
   margin-right: 10px;
 
-  background-image: url('../images/rocket-icon.png');
+  background-image: url('../../images/rocket-icon.png');
   background-size: contain;
 
   transition: transform 250ms linear;

@@ -7,10 +7,17 @@
     <title>Animation</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
-    <link rel="stylesheet" href="./css/animation-ex1.css" />
-    <link rel="stylesheet" href="./css/animation-ex2.css" />
-    <link rel="stylesheet" href="./css/animation-ex3.css" />
-    <link rel="stylesheet" href="./css/animation-ex3-additional-style.css" />
+    <link rel="stylesheet" href="./css/animation/animation-common.css" />
+    <link rel="stylesheet" href="./css/animation/animation-ex1.css" />
+    <link rel="stylesheet" href="./css/animation/animation-ex2.css" />
+    <link rel="stylesheet" href="./css/animation/animation-ex3.css" />
+    <link
+      rel="stylesheet"
+      href="./css/animation/animation-ex3-additional-style.css"
+    />
+    <link rel="stylesheet" href="./css/animation/animation-ex4.css" />
+    <link rel="stylesheet" href="./css/close-btn.css" />
+    <link rel="stylesheet" href="./css/animation/animation-ex5.css" />
   </head>
   <body>
     <header class="header">
@@ -39,95 +46,119 @@
 
     <section class="section">
       <div class="container">
-        <p style="font-size: 42px; text-align: center; color: #2c2c2c">
-          Example 1 - button with icon, <b>one icon is changing with another</b>
-        </p>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- EXAMPLE 1 ----- -->
-        <a class="button"> Quick start </a>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
+        <div>
+          <p class="animation__title">
+            Example 1 - button with icon,
+            <b>one icon is changing with another</b>
+          </p>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- EXAMPLE 1 ----- -->
+          <a class="button"> Quick start </a>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+        </div>
 
-        <p
-          style="
-            font-size: 42px;
-            text-align: center;
-            color: #2c2c2c;
-            margin-top: 40px;
-            margin-bottom: 20px;
-          "
-        >
-          Example 2 - some underline on list items
-        </p>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- EXAMPLE 2 ----- -->
-        <ul class="menu list">
-          <li class="menu__item">
-            <a class="menu__link" href="">Blog</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Profile</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Gallery</a>
-          </li>
-        </ul>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
+        <div>
+          <p class="animation__title">
+            Example 2 - some underline on list items
+          </p>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- EXAMPLE 2 ----- -->
+          <ul class="menu list">
+            <li class="menu__item">
+              <a class="menu__link" href="">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Profile</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Gallery</a>
+            </li>
+          </ul>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+        </div>
 
-        <p
-          style="
-            font-size: 42px;
-            text-align: center;
-            color: #2c2c2c;
-            margin-top: 40px;
-            margin-bottom: 20px;
-          "
-        >
-          Example 3 - animation for card overlay
-        </p>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- EXAMPLE 3 ----- -->
-        <div class="product">
-          <div class="product__thumb">
-            <img
-              src="https://picsum.photos/200/300"
-              alt="Random picsum image"
-              width="350"
-              height="400"
-            />
-            <div class="product__overlay">
-              <div class="product__actions">
-                <svg width="50" height="50" class="product__icon">
-                  <use href="./images/sprite.svg#icon-home"></use>
-                </svg>
-                <svg width="50" height="50" class="product__icon">
-                  <use href="./images/sprite.svg#icon-pencil"></use>
-                </svg>
-                <svg width="50" height="50" class="product__icon">
-                  <use href="./images/sprite.svg#icon-star"></use>
-                </svg>
+        <div>
+          <p class="animation__title">Example 3 - animation for card overlay</p>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- EXAMPLE 3 ----- -->
+          <div class="product">
+            <div class="product__thumb">
+              <img
+                src="https://picsum.photos/200/300"
+                alt="Random picsum image"
+                width="350"
+                height="400"
+              />
+              <div class="product__overlay">
+                <div class="product__actions">
+                  <svg width="50" height="50" class="product__icon">
+                    <use href="./images/sprite.svg#icon-home"></use>
+                  </svg>
+                  <svg width="50" height="50" class="product__icon">
+                    <use href="./images/sprite.svg#icon-pencil"></use>
+                  </svg>
+                  <svg width="50" height="50" class="product__icon">
+                    <use href="./images/sprite.svg#icon-star"></use>
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="product__descr">
-            <h2>Product 1</h2>
-            <span>Price:</span>
-            <span>300 pln.</span>
+            <div class="product__descr">
+              <h2>Product 1</h2>
+              <span>Price:</span>
+              <span>300 pln.</span>
+            </div>
           </div>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
         </div>
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
-        <!-- ------- ------- ------- -->
+
+        <div>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- EXAMPLE 4 - A - -->
+          <p class="animation__title">Example 4 - Modal</p>
+          <button type="button" class="modal-open-btn" data-open-modal>
+            Open modal
+          </button>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+        </div>
+
+        <div>
+          <p class="animation__title">
+            Example 5 - According to CSS 3D Transform
+          </p>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- EXAMPLE 5 ----- -->
+          <div class="example5">
+            <div class="scene">
+              <div class="box"></div>
+            </div>
+            <div class="scene1">
+              <div class="box1"></div>
+            </div>
+          </div>
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+          <!-- ------- ------- ------- -->
+        </div>
       </div>
     </section>
 
@@ -149,5 +180,27 @@
         <h2>Footer</h2>
       </div>
     </footer>
+
+    <!-- ------- ------- ------- -->
+    <!-- ------- ------- ------- -->
+    <!-- ------- ------- ------- -->
+    <!-- ------- EXAMPLE 4 - B - -->
+    <div class="backdrop backdrop--is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="close-btn" data-close-modal>&#10539;</button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi
+          repudiandae vero maiores delectus, odio amet? Dolor error est earum
+          delectus veniam labore nostrum quod repudiandae laudantium, optio
+          perferendis dolorem. Aliquam ex nulla ipsam facilis error accusamus
+          repudiandae qui fugit placeat reprehenderit, numquam, soluta
+          voluptate. Nesciunt cupiditate saepe soluta provident?
+        </p>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <!-- ------- ------- ------- -->
+    <!-- ------- ------- ------- -->
+    <!-- ------- ------- ------- -->
   </body>
 </html>
