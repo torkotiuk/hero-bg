@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header-link" href="./index.html">HERO</a>
+        <a class="header-link" href="./pseudoelements.html">Pseudoelements</a>
+        <a class="header-link" href="./vector-graphic.html">Vector graphics</a>
+        <a class="header-link" href="./positioning.html">Positioning</a>
+        <a class="header-link" href="./modal.html">Modal</a>
+        <a class="header-link" href="./animation.html">Animation</a>
+        <a class="current header-link" href="./form.html">Form</a>
+
+        <!-- github -->
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://github.com/torkotiuk/hero-bg"
+        >
+          <svg class="github-icon" width="30" height="38">
+            <use href="./images/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <h1 class="title">Modal</h1>
+
+    <section class="section">
+      <div class="container">
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- Example --- --- -->
+        <form class="form1 js-speaker-form">
+          <!-- name, phone, email -->
+          <div class="form1__first-group-feilds">
+            <div class="form1__field">
+              <label class="form1__label" for="user-name">Name</label>
+              <input
+                class="form1__input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Type your name"
+              />
+            </div>
+
+            <div class="form1__field">
+              <label class="form1__label" for="tel">Phone</label>
+              <input class="form1__input" type="tel" name="phone" id="tel" />
+            </div>
+
+            <div class="form1__field">
+              <label class="form1__label" for="mail">E-mail</label>
+              <input class="form1__input" type="email" name="email" id="mail" />
+            </div>
+          </div>
+
+          <!-- Technology -->
+          <div class="form1__group" role="group">
+            <b class="form1__group-title">Choose technology of talking about</b>
+            <ul class="form1__topic-technologies list">
+              <li>
+                <input
+                  type="checkbox"
+                  name="topic"
+                  value="html"
+                  id="html"
+                  checked
+                />
+                <label for="html">HTML</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="topic"
+                  value="css"
+                  id="css"
+                  checked
+                />
+                <label for="css">CSS</label>
+              </li>
+              <li>
+                <input type="checkbox" name="topic" value="js" id="js" />
+                <label for="js">JavaScript</label>
+              </li>
+            </ul>
+          </div>
+          <!-- --- --- -- -->
+
+          <!-- experience -->
+          <div class="form1__group form1__group--experience" role="group">
+            <b class="form1__group-title">Experience level</b>
+
+            <ul class="form1__experience list">
+              <li>
+                <input
+                  type="radio"
+                  name="experience"
+                  value="junior"
+                  id="jun"
+                  checked
+                />
+                <label for="jun">Junior</label>
+              </li>
+              <li>
+                <input type="radio" name="experience" value="middle" id="mid" />
+                <label for="mid">Middle</label>
+              </li>
+              <li>
+                <input type="radio" name="experience" value="senior" id="sen" />
+                <label for="sen">Senior</label>
+              </li>
+            </ul>
+          </div>
+          <!-- --- --- -  -->
+
+          <!-- data & time -->
+          <div class="form1__field form1__field--date">
+            <label for="date">Report data</label>
+            <input
+              class="form1__date"
+              type="datetime-local"
+              name="date"
+              id="date"
+              min="2022-07-22T09:00"
+              max="2022-07-24T17:00"
+            />
+          </div>
+          <!-- --- --- -  -->
+
+          <!-- file onload -->
+          <div class="form1__field">
+            <label for="pdf">Load file in pdf</label>
+            <input class="form1__file-input" type="file" name="pdf" id="pdf" />
+          </div>
+
+          <!-- --- --- -  -->
+
+          <!-- Comments -->
+          <div class="form1__field">
+            <label for="comment">Live comments</label>
+
+            <textarea
+              class="form__comments"
+              name="comment"
+              id="comment"
+              rows="8"
+            ></textarea>
+          </div>
+          <!-- --- --- -  -->
+
+          <!-- --- Policy --- -->
+          <div class="form1__field">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy">Agree for everything</label>
+          </div>
+          <!-- --- --- --- -- -->
+
+          <br />
+          <button type="submit">Send</button>
+        </form>
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+      </div>
+    </section>
+
+    <!-- Learning INFO -->
+    <section class="section">
+      <div class="container">
+        <h2>Some form info:</h2>
+        <ul>
+          <li>
+            If we have <b>couple forms in one page</b>, we have to set different
+            id's for inputs, but we could set the same name-s in different form
+            in one page, f.e.
+            <ul>
+              <li>form1, input name=user id="form1-user"</li>
+              <li>form2, input name=user id="form2-user"</li>
+            </ul>
+          </li>
+          <li>
+            In a group of <b>checkbox</b> possibly use different names, but more
+            convenient for js & backend of using one name for one group of
+            checkbox-es
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=Ssws6DoJ3oY&t=1560s"
+              ><b>HOOK -</b> Group some elements in form with div role="" -
+              webinar 00:26:00</a
+            >
+          </li>
+          <li>
+            use <b>one checked</b> attribute for radio buttons &
+            <b>many checked</b> for checkbox buttons
+          </li>
+          <li>use attribute <b>autofocus</b></li>
+          <li>
+            use attribute <b>autocomplete</b> as for all form and for any
+            element, f.e.
+            <ul>
+              <li>form autocomplete="off"</li>
+              <li>input name="username" autocomplete="on"</li>
+            </ul>
+            Also there are specific autocomplete values (name, email, country
+            et.c.)
+          </li>
+          <li>
+            <b>Don't style checkbox in usual css</b>, b/c it looks in different
+            browsers really bad
+          </li>
+          <li>
+            Use
+            <a target="_blank" href="https://autoprefixer.github.io/"
+              >autoprefixer</a
+            >
+            for making one simple css style for all browsers
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- --- --- --- --- --- -->
+    <footer class="footer">
+      <div class="container">
+        <h2>Footer</h2>
+      </div>
+    </footer>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

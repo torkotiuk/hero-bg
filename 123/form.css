@@ -1,0 +1,35 @@
+.form1 {
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 20px;
+  width: 4 00px;
+  outline: 1px solid tomato;
+}
+
+.form1__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form1__field input {
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid #2a2a2a;
+}
+
+.form1__field input::placeholder {
+  color: #a57979;
+}
+
+.form1__field label {
+  margin-bottom: 5px;
+}
+
+.form1__group-title {
+  display: block;
+}
+
+.form__comments {
+  resize: none;
+}

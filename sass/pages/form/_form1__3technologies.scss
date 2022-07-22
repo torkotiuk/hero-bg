@@ -1,0 +1,14 @@
+.form1__topic-technologies {
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  input[type='checkbox'] {
+  }
+
+  label {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}

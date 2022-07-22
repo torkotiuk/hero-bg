@@ -1,0 +1,96 @@
+/* ========================= EXAMPLE 2 ========================= */
+.card {
+  padding: 10px;
+  width: 400px;
+  outline: 2px solid black;
+}
+.card .text {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.card::before {
+  display: block;
+  content: '';
+  height: 70px;
+  margin-bottom: 20px;
+
+  /* background-size: contain; */
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(216, 228, 255);
+}
+
+.icon-astronaut::before {
+  background-image: url('../images/pseudo/astronaut.svg');
+}
+
+.icon-clock::before {
+  background-image: url('../images/pseudo/clock.svg');
+}
+
+/* ============================================================= */
+
+/* ========================= EXAMPLE 1 ========================= */
+/* Approach 2 - with pseudoelement*/
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-size: 24px;
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  outline: 1px solid black;
+
+  background-image: url('../images/rocket-icon.png');
+  background-size: contain;
+}
+
+.button:hover,
+.button:focus {
+  background-color: pink;
+  color: green;
+}
+
+/* Approach 1 - without pseudoelement*/
+
+/* .button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-size: 24px;
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button > .icon {
+  width: 20px;
+  height: 20px;
+  outline: 1px solid black;
+  margin-right: 10px;
+
+  background-image: url('../images/rocket-icon.png');
+  background-size: contain;
+}
+
+.button:hover,
+.button:focus {
+  background-color: pink;
+  color: green;
+} */
+
+/* ============================================================= */

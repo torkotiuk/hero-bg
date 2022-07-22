@@ -1,0 +1,21 @@
+.overlay-container {
+  outline: 3px solid red;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: 
+    /* necessary upper gradient*/ linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.3),
+      rgba(0, 0, 255, 0.3)
+    ),
+    /* bg image under gradient */ url('../../images/hero-mobile.jpg'),
+    /* reserve bg in case of pic couldn't be downloaded */
+      linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 255));
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
