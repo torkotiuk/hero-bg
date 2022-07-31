@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
+    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -37,7 +41,7 @@
         <!-- --- --- --- --- --- -->
         <!-- --- --- --- --- --- -->
         <!-- --- --- --- --- --- -->
-        <!-- --- Example --- --- -->
+        <!-- --- Example form1 --- --- -->
         <form class="form1 js-speaker-form">
           <!-- name, phone, email -->
           <div class="form1__first-group-feilds">
@@ -164,11 +168,55 @@
           </div>
           <!-- --- --- --- -- -->
 
-          <br />
           <button type="submit">Send</button>
         </form>
         <!-- --- --- --- --- --- -->
         <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- Example form2-- -->
+        <form class="form2 js-speaker-form2">
+          <!--  -->
+          <div class="form2__field">
+            <input
+              autocomplete="off"
+              placeholder=" "
+              type="text"
+              id="phone"
+              name="user-phone"
+            />
+            <label for="phone">Phone</label>
+            <span class="form2__icon"></span>
+          </div>
+          <!-- --- --- --- --- --- -->
+          <!-- --- --- --- --- --- -->
+          <!-- --- --- --- --- --- -->
+
+          <!-- Info -->
+          <p>
+            If we forget to connect modern-normalize for page and created some
+            form, also giving for such form INPUTs width: 100% we would find out
+            input-s after the form, so we should connect modern-normalize or set
+            for such input-s <b>box-sizing: border-box;</b>
+          </p>
+          <p>
+            In css we can't take selector before current when they are sibling,
+            so we should sometimes move label after input for using selector
+            <b>selector1 + selector2-next</b>
+          </p>
+          <p>
+            if we have a lot of sibling elements and have to take all of them we
+            have to use selector <b>~</b>
+          </p>
+          <p>
+            HOOK: :placeholder-shown & not(:placeholder-shown) - use for input
+            with space in placeholder like <b>&lt;input placeholder=" "&gt;</b>
+          </p>
+        </form>
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+        <!-- --- --- --- --- --- -->
+
         <!-- --- --- --- --- --- -->
       </div>
     </section>
@@ -226,6 +274,13 @@
             >
             for making one simple css style for all browsers
           </li>
+          <li>
+            Try to use
+            <a target="_blank" href="https://www.npmjs.com/package/validator"
+              >validator.js</a
+            >
+            library
+          </li>
         </ul>
       </div>
     </section>
@@ -236,5 +291,6 @@
       </div>
     </footer>
     <script src="./js/form.js"></script>
+    <script src="./js/form2.js"></script>
   </body>
 </html>

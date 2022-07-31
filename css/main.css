@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   width: 1200px;
   margin-left: auto;
@@ -224,8 +219,396 @@ a {
   color: green;
 } */
 /* ============================================================= */
+.fb-icon {
+  outline: 1px solid green;
+  fill: blue;
+  /* fill-opacity: 0.8; */
+  stroke: yellowgreen;
+  stroke-width: 2;
+}
+
+.fb-icon:hover {
+  fill: #0101af;
+  stroke: #a3f500;
+}
+
+.icon-clubs {
+  padding: 10px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.icon-clubs:hover {
+  fill: #248000;
+  background-color: #ffe8e8;
+}
+
+/* add body-top padding automatically by --body-height-auto.js-- */
+/* body {
+  padding-top: 67px;
+} */
+/* --------------------------- */
+/* 1. Change height in header1 */
+/* 2. body-height-auto.js changed automatically padding-top in header */
+.header1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(133, 186, 255, 0.5);
+  z-index: 1;
+}
+
+.header1 .container {
+  display: flex;
+  align-items: center;
+}
+
+/* --- --- --- --- --- --- --- --- --- */
+/* --- --- --- PRODUCT start --- --- - */
+.product {
+  display: inline-block;
+  box-shadow: 1px 7px 24px 0px #42445a;
+}
+
+.product:hover .product__actions {
+  opacity: 1;
+}
+
+.product__thumb {
+  position: relative;
+}
+
+.product__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  opacity: 0;
+  transition: 500ms opacity linear;
+  /* z-index - for hiding  */
+  /* z-index: 2; */
+}
+
+/* Overlay making --- BEGIN */
+.product__thumb::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 115, 0, 0.5);
+  opacity: 0;
+  transition: 500ms opacity linear;
+}
+
+.product__thumb:hover::before {
+  opacity: 1;
+}
+
+/* Overlay making --- END */
+.product__icon {
+  outline: 1px solid #2a2a2a;
+  background-color: #f0ebeb;
+}
+
+.product__descr {
+  padding: 10px;
+}
+
+/* --- --- ---PRODUCT end  --- --- --- */
+/* --- --- --- --- --- --- --- --- --- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 210, 152, 0.5);
+  transition: 250ms opacity linear;
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 300px;
+  min-width: 400px;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 24px;
+  opacity: 1;
+}
+
+.close-btn {
+  margin-left: auto;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  font-size: 30px;
+  color: #fff;
+  background-color: teal;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 250ms color linear, 250ms background-color linear;
+}
+
+.close-btn:hover {
+  color: teal;
+  background-color: #fff;
+  border: 1px solid teal;
+}
+
+.animation__title {
+  font-size: 42px;
+  text-align: center;
+  color: #2c2c2c;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.example5 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 36px;
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: pink;
+  color: green;
+}
+
+/* ::before */
+.button::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-image: url("../../images/rocket-icon.png");
+  background-size: contain;
+  transition: transform 250ms linear;
+}
+
+.button:hover::before {
+  transform: translateY(-50px);
+}
+
+/* ::after` */
+.button::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  transform: translateY(50px);
+  transition: transform 250ms linear;
+}
+
+.button:hover::after {
+  transform: translateY(0);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  padding: 20px 40px;
+  font-size: 32px;
+  color: black;
+  outline: 1px solid black;
+}
+
+.menu__link::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  transform: scaleX(0);
+  /* transform-origin: right; */
+  transition: transform 250ms linear;
+}
+
+.menu__link:hover::after {
+  transform: scaleX(1);
+}
+
+.product {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 7px 24px 0px #42445a;
+  overflow: hidden;
+}
+
+.product__thumb {
+  position: relative;
+}
+
+.product__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 250ms linear 250ms;
+}
+
+/* Overlay making --- BEGIN */
+.product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 115, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+}
+
+.product:hover .product__overlay {
+  transform: translateX(0%);
+}
+
+.product:hover .product__actions {
+  opacity: 1;
+}
+
+/* Overlay making --- END */
+.product__icon {
+  outline: 1px solid #2a2a2a;
+  background-color: #f0ebeb;
+}
+
+.product__descr {
+  padding: 10px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 255, 128, 0.5);
+  /* opacity: 1; */
+  transition: opacity 250ms linear;
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop--is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-height: 300px;
+  min-width: 400px;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 24px;
+  transition: transform 250ms linear;
+}
+
+.scene {
+  width: 300px;
+  height: 300px;
+  outline: 5px solid red;
+  perspective: 400px;
+}
+
+.box {
+  height: 100%;
+  background-image: url(../../images/Face-smile.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: #bcffb6;
+  transform: rotateY(60deg);
+  transition: transform 500ms linear;
+}
+
+/* ==================================== */
+.scene1 {
+  width: 300px;
+  height: 300px;
+  outline: 5px solid red;
+  perspective: 400px;
+}
+
+.box1 {
+  height: 100%;
+  background-image: url(../../images/Face-smile.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: #bcffb6;
+  transform: rotateY(0);
+  transition: transform 500ms linear;
+}
+
+.scene1:hover .box1 {
+  transform: rotateY(180deg);
+}
+
 .form1 {
-  width: 400px;
+  width: 500px;
+  outline: 1px solid teal;
+  background-color: #ecffda;
+}
+
+.form1 button[type='submit'] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 50px;
+  font-size: 16px;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
 }
 
 .form1__group-title {
@@ -244,7 +627,6 @@ a {
 }
 
 .form1__field input {
-  margin: 0;
   padding: 6px 10px;
   border: 1px solid #2a2a2a;
 }
@@ -264,7 +646,6 @@ a {
 
 .form1__topic-technologies label {
   margin-left: 10px;
-  font-size: 20px;
 }
 
 .form1__group--experience {
@@ -274,5 +655,54 @@ a {
 .form__comments {
   resize: none;
   padding: 8px;
+}
+
+.form2 {
+  margin-top: 50px;
+  width: 350px;
+  background-color: #c0f8fc;
+  padding-top: 30px;
+  outline: 1px solid black;
+}
+
+.form2__field {
+  position: relative;
+  outline: 2px dotted green;
+}
+
+.form2 input {
+  padding: 6px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form2 label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  transition: transform 250ms ease-in-out;
+}
+
+.form2 input:focus + label,
+.form2 input:not(:placeholder-shown) + label {
+  transform: translateY(-40px);
+}
+
+.form2__icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ff6ea5;
+  transition: background-color 250ms linear;
+}
+
+input:focus ~ .form2__icon,
+input:not(:placeholder-shown) ~ .form2__icon {
+  background-color: green;
 }
 /*# sourceMappingURL=main.css.map */

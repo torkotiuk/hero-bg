@@ -4,12 +4,32 @@
 // components
 @import './components/header';
 
-// layouts
+// pages
 @import './pages/hero';
 @import './pages/pseudoelement';
+@import './pages/vector-graphic';
 
+// --- positioning ---
+@import './pages/positioning/positioning-header';
+@import './pages/positioning/positioning-product';
+
+// --- modal ---
+@import './pages/modal';
+@import './components/close-btn';
+
+// --- animation ---
+@import './pages/animation/animation-common';
+@import './pages/animation/animation-ex1';
+@import './pages/animation/animation-ex2';
+@import './pages/animation/animation-ex3';
+@import './pages/animation/animation-ex3-additional-style';
+@import './pages/animation/animation-ex4';
+@import './pages/animation/animation-ex5';
+
+// --- form ---
 @import './pages/form/form1__1base';
 @import './pages/form/form1__2field';
 @import './pages/form/form1__3technologies';
 @import './pages/form/form1__4experience';
 @import './pages/form/form1__5comments';
+@import './pages/form/form2';

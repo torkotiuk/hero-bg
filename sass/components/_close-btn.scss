@@ -1,0 +1,22 @@
+.close-btn {
+  margin-left: auto;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+
+  font-size: 30px;
+  color: #fff;
+  background-color: teal;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 250ms color linear, 250ms background-color linear;
+}
+
+.close-btn:hover {
+  color: teal;
+  background-color: #fff;
+  border: 1px solid teal;
+}

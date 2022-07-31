@@ -1,0 +1,55 @@
+.form2 {
+  margin-top: 50px;
+  width: 350px;
+  background-color: rgb(192, 248, 252);
+  padding-top: 30px;
+  outline: 1px solid black;
+
+  &__field {
+    position: relative;
+    outline: 2px dotted green;
+  }
+
+  input {
+    padding: 6px 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms ease-in-out;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    transform: translateY(-40px);
+  }
+
+  &__icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    background-color: rgb(255, 110, 165);
+    transition: background-color 250ms linear;
+  }
+
+  input:focus ~ &__icon,
+  input:not(:placeholder-shown) ~ &__icon {
+    background-color: green;
+  }
+}
+
+// input:placeholder-shown {
+//   background-color: rgb(255, 212, 209);
+// }
