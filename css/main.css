@@ -705,4 +705,35 @@ input:focus ~ .form2__icon,
 input:not(:placeholder-shown) ~ .form2__icon {
   background-color: green;
 }
+
+.form3 {
+  width: 450px;
+  padding: 10px;
+  outline: 2px solid red;
+}
+
+.form3 label {
+  position: relative;
+}
+
+.form3 span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+  color: green;
+}
+
+.form3 input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+}
+
+.form3 input:focus-within + span,
+.form3 input:not(:placeholder-shown) + span {
+  transform: translateY(-34px);
+}
 /*# sourceMappingURL=main.css.map */
