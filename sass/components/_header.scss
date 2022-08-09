@@ -1,23 +1,30 @@
 .header .container {
   display: flex;
-  /* flex-wrap: wrap; */
+  // flex-wrap: wrap;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .header-link {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
   /* display: inline-block; */
   padding: 20px 20px;
-  margin-right: 20px;
-  font-size: 24px;
+  margin: 5px 15px;
+
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
   background-color: rgb(163, 192, 255);
 }
 
-.github-link {
-  margin-left: auto;
-}
+// .github-link {
+//   margin-left: auto;
+// }
 
 .github-link:hover .github-icon {
   fill: rgb(154, 66, 255);

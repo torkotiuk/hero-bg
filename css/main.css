@@ -1,10 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   outline: 1px solid green;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header,
@@ -89,23 +110,24 @@ a {
 
 .header .container {
   display: flex;
-  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .header-link {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
   /* display: inline-block; */
   padding: 20px 20px;
-  margin-right: 20px;
-  font-size: 24px;
+  margin: 5px 15px;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
   background-color: #a3c0ff;
-}
-
-.github-link {
-  margin-left: auto;
 }
 
 .github-link:hover .github-icon {
