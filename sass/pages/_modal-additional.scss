@@ -1,0 +1,26 @@
+.guide-modal {
+  font-size: 24px;
+  background-color: rgb(228, 255, 234);
+}
+
+.guide__backdrop-style,
+.guide__modal,
+.guide__is-hidden,
+.guide__js {
+  display: block;
+}
+
+.guide__modal--mg {
+  display: block;
+  margin-left: 10px;
+}
+
+.guide__data-attribute {
+  color: #6f6fff;
+}
+
+.guide__modal-markup {
+  display: inline-block;
+  padding: 10px;
+  outline: 3px solid rgb(37, 255, 117);
+}

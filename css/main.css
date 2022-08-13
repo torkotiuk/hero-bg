@@ -86,11 +86,6 @@ a {
 }
 
 /* modal additional styles*/
-.main-modal .container {
-  background-color: #deffde;
-  height: 800px;
-}
-
 .modal-open-btn {
   padding: 20px;
   border: none;
@@ -106,6 +101,11 @@ a {
   color: tomato;
   background-color: #f7f7f7;
   border: 1px solid tomato;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header .container {
@@ -369,6 +369,33 @@ a {
   background-color: #fff;
   font-size: 24px;
   opacity: 1;
+}
+
+.guide-modal {
+  font-size: 24px;
+  background-color: #e4ffea;
+}
+
+.guide__backdrop-style,
+.guide__modal,
+.guide__is-hidden,
+.guide__js {
+  display: block;
+}
+
+.guide__modal--mg {
+  display: block;
+  margin-left: 10px;
+}
+
+.guide__data-attribute {
+  color: #6f6fff;
+}
+
+.guide__modal-markup {
+  display: inline-block;
+  padding: 10px;
+  outline: 3px solid #25ff75;
 }
 
 .close-btn {

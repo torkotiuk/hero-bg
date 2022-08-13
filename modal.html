@@ -38,12 +38,176 @@
         </a>
       </div>
     </header>
-    <main class="main-modal">
+    <main>
       <div class="container">
-        <h1 class="title">Modal</h1>
-        <button type="button" class="modal-open-btn" data-open-modal>
-          Open modal
-        </button>
+        <section class="section">
+          <h1 class="title">Modal</h1>
+          <button type="button" class="modal-open-btn" data-open-modal>
+            Open modal
+          </button>
+
+          <div class="guide-modal">
+            <h2>
+              Guide for modal creation:
+              <span style="font-size: 20px"
+                >(according to webinar
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=K_Jxc8VgSIk"
+                  >Модуль 5. Вебинар №9. Позиционированные элементы</a
+                >)</span
+              >
+            </h2>
+            <ol>
+              <!-- 1. Open button -->
+              <li>Create button to open modal</li>
+              <!-- 2. Add backdrop -->
+              <li>
+                Create &lt;div class=backdrop&gt; &lt;/div&gt;
+                <ul>
+                  <li>
+                    .backdrop {
+                    <span class="guide__backdrop-style">position: fixed;</span>
+                    <span class="guide__backdrop-style">top: 0;</span>
+                    <span class="guide__backdrop-style">left: 0;</span>
+                    <span class="guide__backdrop-style">width: 100%;</span>
+                    <span class="guide__backdrop-style">height: 100%;</span>
+                    <span class="guide__backdrop-style"
+                      >background-color: rgba(255, 165, 0, 0.5)</span
+                    >
+                    }
+                  </li>
+                </ul>
+              </li>
+              <!-- 3. Add modal -->
+              <li>
+                Add &lt;div class="modal"&gt; &lt;/div&gt; - means modal
+                content, like
+                <span class="guide__modal">&lt;div class="backdrop"&gt;</span>
+                <span class="guide__modal--mg">&lt;div class="modal"&gt;</span>
+                <span class="guide__modal--mg">&lt;/div&gt;</span>
+                <span class="guide__modal">&lt;/div&gt;</span>
+
+                <ul>
+                  <li>
+                    .modal {
+                    <span class="guide__modal">position: absolute;</span>
+                    <span class="guide__modal">top: 50%;</span>
+                    <span class="guide__modal">left: 50%;</span>
+                    <span class="guide__modal"
+                      >transform: translate(-50%, -50%);</span
+                    >
+
+                    <span class="guide__modal">width: 600px;</span>
+                    <span class="guide__modal">height: 400px;</span>
+                    <span class="guide__modal">background-color: white;</span>
+                    }
+                  </li>
+                </ul>
+              </li>
+              <!-- 4. Add content -->
+              <li>Add necessary content ot modal</li>
+              <!-- 5. Add close button -->
+              <li>Add close button</li>
+              <!-- 6. backdrop--is-hidden -->
+              <li>
+                Add <b>.backdrop.is-hidden</b> (or .backdrop--is-hidden if we
+                use BEM) class for div with backdrop, like
+                <ul>
+                  <li>
+                    .backdrop--is-hidden {
+                    <span class="guide__is-hidden">opacity: 0;</span>
+                    <span class="guide__is-hidden">pointer-events: none;</span>
+                    }
+                  </li>
+                </ul>
+              </li>
+              <!-- 7. Add JS -->
+              <li>
+                Add JS script:
+                <ul>
+                  <!-- script -->
+                  <li>
+                    const refs = {
+                    <span class="guide__js guide__modal--mg"
+                      >openModalBtn:
+                      document.querySelector('[data-open-modal]'),</span
+                    >
+                    <span class="guide__js guide__modal--mg"
+                      >closeModalBtn:
+                      document.querySelector('[data-close-modal]'),</span
+                    >
+                    <span class="guide__js guide__modal--mg"
+                      >backdrop:
+                      document.querySelector('[data-backdrop]'),</span
+                    >
+                    };
+                    <br />
+                    <br />
+                    <span class="guide__js"
+                      >refs.openModalBtn.addEventListener('click',
+                      toggleModal);</span
+                    >
+                    <span class="guide__js"
+                      >refs.closeModalBtn.addEventListener('click',
+                      toggleModal);</span
+                    >
+                    <span class="guide__js"
+                      >refs.backdrop.addEventListener('click',
+                      logBackdropClick);</span
+                    >
+                    <br />
+                    <br />
+                    function toggleModal() {
+                    <span class="guide__js guide__modal--mg"
+                      >refs.backdrop.classList.toggle('backdrop--is-hidden');</span
+                    >
+                    }
+                    <br />
+                    <br />
+                    function logBackdropClick() {
+                    <span class="guide__js guide__modal--mg"
+                      >console.log('This is a click to the backdrop');</span
+                    >
+                    }
+                  </li>
+                  <!-- data attributes -->
+                  <li>
+                    Add data attributes for backdrop, open, close buttons, like
+                    <div class="guide__modal-markup">
+                      <div>
+                        &lt;button
+                        <span class="guide__data-attribute"
+                          >data-open-modal</span
+                        >&gt;Open modal &lt;/button&gt;
+                      </div>
+                      <br />
+
+                      <span class="guide__modal"
+                        >&lt;div class="backdrop backdrop--is-hidden"
+                        <span class="guide__data-attribute">data-backdrop</span>
+                        &gt;</span
+                      >
+                      <span class="guide__modal--mg"
+                        >&lt;div class="modal"&gt;</span
+                      >
+                      <div class="guide__modal--mg">
+                        &lt;button
+                        <span class="guide__data-attribute"
+                          >data-close-modal</span
+                        >&gt;Close modal &lt;/button&gt;
+                      </div>
+                      <span class="guide__modal--mg">&lt;/div&gt;</span>
+                      <span class="guide__modal">&lt;/div&gt;</span>
+                    </div>
+                    <!-- -- -->
+                    <!-- -- -->
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="footer">

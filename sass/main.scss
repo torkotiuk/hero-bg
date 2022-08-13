@@ -1,10 +1,11 @@
 // base
 @import './base/_base';
+@import './base/section';
 
 // components
 @import './components/header';
 
-// pages
+// === PAGES ===
 @import './pages/hero';
 @import './pages/pseudoelement';
 @import './pages/vector-graphic';
@@ -15,6 +16,7 @@
 
 // --- modal ---
 @import './pages/modal';
+@import './pages/modal-additional';
 @import './components/close-btn';
 
 // --- animation ---
