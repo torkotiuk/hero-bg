@@ -180,6 +180,7 @@
         <!-- --- --- --- --- --- -->
         <!-- --- Example form2-- -->
         <form class="form2 js-speaker-form2">
+          <h2 style="margin: 0; margin-bottom: 20px">Form 2.</h2>
           <!--  -->
           <div class="form2__field">
             <input
@@ -218,7 +219,90 @@
           </p>
         </form>
 
-        <form class="form3 js-speaker-form3">
+        <!--  -->
+        <!--  F O R M 3 start-->
+        <form class="form3">
+          <h2 style="margin: 0; margin-bottom: 20px">
+            Form 3. Guide for label moving up.
+          </h2>
+          <ol>
+            <!-- 1. Make first markup -->
+            <li>
+              Make some div with input, label & span (as a icon)
+
+              <ul>
+                <li>
+                  <div>&lt;div class="form3__field"&gt;</div>
+                  <div style="margin-left: 20px">
+                    <div>
+                      &lt;input class="form3__input" type="text"
+                      id="form3__name" /&gt;
+                    </div>
+                    <div>
+                      &lt; label class="form3__label"
+                      for="form3__name"&gt;Name&lt;/label&gt;
+                    </div>
+                    <div>&lt;span class="form3__span"&gt;&lt;/span&gt;</div>
+                  </div>
+                  <div>&lt;div&gt;</div>
+                </li>
+                <li>.form3__field {position: relative;}</li>
+                <li>
+                  .form3__label {
+                  <div>position: absolute;</div>
+                  <div>top: 0;</div>
+                  <div>left: 0;</div>
+                  <div>transition: transform 250ms linear;</div>
+                  }
+                </li>
+              </ul>
+            </li>
+            <!-- 2. Add selector for moving label -->
+            <li>
+              Add selector for moving label
+              <div>
+                .form3__input:focus + .form3__label {transform:
+                translateY(-30px);}
+              </div>
+            </li>
+            <!-- 3. After typing text in INPUT live label in place where it was after point 2. -->
+            <li>
+              After typing text in INPUT live label in place where it was after
+              point 2 by adding selector
+              <ul>
+                <li>
+                  .form3__input:not(:placeholder-shown) + .form3__label
+                  {transform: translateY(-30px);}
+                </li>
+                <li>
+                  add empty placeholder=" " for markup
+                  <div>
+                    &lt;input class="form3__input" type="text" id="form3__name"
+                    <span style="color: blue">placeholder=" "</span> /&gt;
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <!-- form3__field -->
+          <div class="form3__field">
+            <input
+              class="form3__input"
+              type="text"
+              id="form3__name"
+              placeholder=" "
+            />
+            <label class="form3__label" for="form3__name">Name</label>
+            <span class="form3__span"></span>
+          </div>
+          <!--  -->
+        </form>
+        <!--  F O R M 3 end-->
+        <!--  -->
+
+        <form class="form4 js-speaker-form3">
+          <h2 style="margin: 0; margin-bottom: 20px">Form 4.</h2>
+
           <p>Use <b>:focus-within</b> CSS pseudo-class</p>
           <label>
             <input type="email" name="user-email" placeholder=" " />

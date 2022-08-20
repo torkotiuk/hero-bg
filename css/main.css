@@ -756,16 +756,51 @@ input:not(:placeholder-shown) ~ .form2__icon {
 }
 
 .form3 {
+  background-color: pink;
+  outline: 2px dotted green;
+}
+
+.form3__field {
+  position: relative;
+  outline: 1px dotted orange;
+  margin-top: 30px;
+}
+
+.form3__input {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form3__input:focus + .form3__label {
+  transform: translateY(-30px);
+  color: red;
+}
+
+.form3__input:not(:placeholder-shown) + .form3__label {
+  transform: translateY(-30px);
+}
+
+.form3__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 250ms linear;
+  font-size: 24px;
+}
+
+.form4 {
+  margin-top: 30px;
   width: 450px;
   padding: 10px;
   outline: 2px solid red;
 }
 
-.form3 label {
+.form4 label {
   position: relative;
 }
 
-.form3 span {
+.form4 span {
   position: absolute;
   display: block;
   top: 50%;
@@ -775,14 +810,14 @@ input:not(:placeholder-shown) ~ .form2__icon {
   color: green;
 }
 
-.form3 input {
+.form4 input {
   width: 100%;
   box-sizing: border-box;
   padding: 6px 10px;
 }
 
-.form3 input:focus-within + span,
-.form3 input:not(:placeholder-shown) + span {
+.form4 input:focus-within + span,
+.form4 input:not(:placeholder-shown) + span {
   transform: translateY(-34px);
 }
 /*# sourceMappingURL=main.css.map */

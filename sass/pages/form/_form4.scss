@@ -1,0 +1,31 @@
+.form4 {
+  margin-top: 30px;
+  width: 450px;
+  padding: 10px;
+  outline: 2px solid red;
+
+  label {
+    position: relative;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+    color: green;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 10px;
+  }
+
+  input:focus-within + span,
+  input:not(:placeholder-shown) + span {
+    transform: translateY(-34px);
+  }
+}

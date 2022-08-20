@@ -1,30 +1,38 @@
 .form3 {
-  width: 450px;
-  padding: 10px;
-  outline: 2px solid red;
+  background-color: pink;
+  outline: 2px dotted green;
 
-  label {
+  &__field {
     position: relative;
+    outline: 1px dotted orange;
+    margin-top: 30px;
   }
 
-  span {
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    transition: transform 250ms linear;
-    color: green;
-  }
-
-  input {
+  &__input {
+    font-size: 24px;
     width: 100%;
+
     box-sizing: border-box;
-    padding: 6px 10px;
   }
 
-  input:focus-within + span,
-  input:not(:placeholder-shown) + span {
-    transform: translateY(-34px);
+  &__input:focus + &__label {
+    transform: translateY(-30px);
+    color: red;
+  }
+
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translateY(-30px);
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 250ms linear;
+    font-size: 24px;
+  }
+
+  &__span {
+    //
   }
 }
