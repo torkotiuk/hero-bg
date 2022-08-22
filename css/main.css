@@ -820,4 +820,34 @@ input:not(:placeholder-shown) ~ .form2__icon {
 .form4 input:not(:placeholder-shown) + span {
   transform: translateY(-34px);
 }
+
+.form5 {
+  padding: 5px;
+  background-color: #f8ffea;
+  outline: 1px solid black;
+}
+
+.form5 label {
+  outline: 1px solid black;
+  display: inline-block;
+}
+
+.form5 .checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.form5 .icon {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+}
+
+.form5 .checkbox:checked + .icon {
+  background-color: green;
+}
 /*# sourceMappingURL=main.css.map */

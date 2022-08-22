@@ -141,6 +141,12 @@
               min="2022-07-22T09:00"
               max="2022-07-24T17:00"
             />
+            <p>
+              Try to make &lt;input type="file"&gt; by
+              <a target="_blank" href="https://www.dropzone.dev/js/"
+                >dropzone.dev</a
+              >
+            </p>
           </div>
           <!-- --- --- -  -->
 
@@ -211,7 +217,13 @@
           </p>
           <p>
             if we have a lot of sibling elements and have to take all of them we
-            have to use selector <b>~</b>
+            have to use selector <b>~</b>, explanation in
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=wahf3ZcDxV4&t=2070s"
+              >Модуль 6. Вебинар №12. Стилизация Форм - from 00:34:30 till
+              00:43:00</a
+            >
           </p>
           <p>
             HOOK: :placeholder-shown & not(:placeholder-shown) - use for input
@@ -300,6 +312,8 @@
         <!--  F O R M 3 end-->
         <!--  -->
 
+        <!--  -->
+        <!--  F O R M 4 start-->
         <form class="form4 js-speaker-form3">
           <h2 style="margin: 0; margin-bottom: 20px">Form 4.</h2>
 
@@ -309,9 +323,95 @@
             <span>Email</span>
           </label>
         </form>
-        <!-- --- --- --- --- --- -->
-        <!-- --- --- --- --- --- -->
-        <!-- --- --- --- --- --- -->
+        <!--  F O R M 4 end-->
+        <!--  -->
+
+        <!-- form 5 S T A R T -->
+        <form class="form5">
+          <h2>Form 5. Custom checkbox.</h2>
+          <!-- Form 5 - EXAMPLE Start-->
+          <label
+            ><input class="checkbox" type="checkbox" />
+            <span class="icon"></span>
+            HTML
+          </label>
+          <!-- Form 5 - EXAMPLE End -->
+
+          <h2>Guide:</h2>
+          <ol>
+            <li>
+              Make markup:
+              <div>
+                &lt;label&gt;
+                <div style="margin-left: 20px">
+                  <div>&lt;input class="checkbox" type="checkbox" /&gt;</div>
+                  <div>&lt;span class="icon"&gt;&lt;/span&gt;</div>
+                  <div>HTML</div>
+                </div>
+                &lt;/label&gt;
+              </div>
+            </li>
+            <li>
+              Make <b>appearance: none;</b> for all browsers by service
+              autoprefixer and take out checkbox anywhere by position: absolute,
+              like
+              <div>
+                .checkbox {
+                <div>-webkit-appearance: none;</div>
+                <div>-moz-appearance: none;</div>
+                <div>appearance: none;</div>
+                <div>position: absolute;</div>
+                }
+              </div>
+            </li>
+            <li>
+              Make some icon, like
+              <div>
+                .icon {
+                <div>content: '';</div>
+                <div>display: inline-block;</div>
+                <div>width: 30px;</div>
+                <div>height: 30px;</div>
+                <div>background-color: grey;</div>
+                }
+              </div>
+            </li>
+            <li>
+              Then change smth. in icon
+              <div>
+                .checkbox:checked + .icon {
+                <div>background-color: green;</div>
+                }
+              </div>
+            </li>
+            <li>
+              For making better clicking in label make it inline-block/block
+              <div>
+                label {
+                <div>outline: 1px solid black;</div>
+                <div>display: inline-block;</div>
+                }
+              </div>
+            </li>
+          </ol>
+
+          <h3>Info:</h3>
+          <span>
+            appearance in
+            <a target="_blank" href="https://caniuse.com/?search=appearance">
+              caniuse.com
+            </a>
+            - don't support all browsers, so got to
+            <a target="_blank" href="https://autoprefixer.github.io/"
+              >autoprefixer</a
+            >
+            and make your checkbox with prefix-es for all browsers, like take
+            <ul>
+              <li>.checkbox { appearance: none; }</li>
+            </ul></span
+          >
+        </form>
+        <!-- form 5 End -->
 
         <!-- --- --- --- --- --- -->
       </div>
@@ -376,6 +476,17 @@
               >validator.js</a
             >
             library
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=E6kLaaQFctU"
+              >Custom checkbox</a
+            >
+            <ul>
+              <li>display: none - hide element from any reader</li>
+              <li>appearance: turn off all default view from all browsers</li>
+            </ul>
           </li>
         </ul>
       </div>
