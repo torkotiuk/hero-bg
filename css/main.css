@@ -828,8 +828,10 @@ input:not(:placeholder-shown) ~ .form2__icon {
 }
 
 .form5 label {
-  outline: 1px solid black;
+  outline: 1px dotted black;
   display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .form5 .checkbox {
@@ -842,12 +844,26 @@ input:not(:placeholder-shown) ~ .form2__icon {
 .form5 .icon {
   content: '';
   display: inline-block;
+  margin-right: 10px;
   width: 30px;
   height: 30px;
-  background-color: grey;
+  border: 4px solid #6e6e6e;
+  border-radius: 8px;
 }
 
 .form5 .checkbox:checked + .icon {
   background-color: green;
+  background-image: url("../../../images/form/form5-arrow-checked.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form5 .text {
+  transition: transform 25ms linear;
+}
+
+.form5 .checkbox:checked ~ .text {
+  transform: translateX(20px);
 }
 /*# sourceMappingURL=main.css.map */
