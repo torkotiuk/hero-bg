@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive & adaptive page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body class="responsive">
+    <header>
+      <nav class="container-resp nav">
+        <a class="logo" href="./index.html">Home</a>
+
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Mobile menu switch">
+            <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="mob-menu-container" id="menu-container" data-menu>
+          Menu content
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="users-section">
+        <div class="container-resp">
+          <h2>First section title</h2>
+          <ul class="list users">
+            <li class="users__item">1</li>
+            <li class="users__item">2</li>
+            <li class="users__item">3</li>
+            <li class="users__item">4</li>
+            <li class="users__item">5</li>
+            <li class="users__item">6</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="groups-section">
+        <div class="container-resp">
+          <h2>Second section title</h2>
+          <ul class="list groups">
+            <li>2 - 1</li>
+            <li>2 - 2</li>
+            <li>2 - 3</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-resp">
+        <h3>
+          Case when we made margins for every element, but for container we made
+          minus margin
+        </h3>
+        <p>
+          calc((100% - amount of margins * 5px) / amount of elements); f.e.
+          (explained for tab & pc views) in
+          <b>First section </b> we got 10px. margins between elements, so we
+          have 5px. margin for every element,
+        </p>
+        <ul>
+          <li>
+            for tablet view we would have formula - calc((100% - 4 * 5px) / 2),
+            where we have 4 margins for 2 elements
+          </li>
+          <li>
+            for pc view we would have formula - calc((100% - 6 * 5px) / 3),
+            where we have 6 margins for 3 elements
+          </li>
+        </ul>
+
+        <h3>Hide unnecessary content for tablet gadgets</h3>
+        <p>@media screen and (max-width: 767px) { display: none; }</p>
+
+        <h3>Burger menu guide</h3>
+        <p>
+          P.S. Blocks with color
+          <span
+            style="
+              background-color: #e6ffea;
+              display: inline-block;
+              width: 50px;
+              height: 40px;
+            "
+          ></span>
+          for accessibility reasons, for start enough add
+          <span> &lt;svg aria-label="Mobile menu switch"&gt;&lt;/svg&gt; </span
+          >, so point 5, 7 should add after everything
+        </p>
+        <ol>
+          <li>Add necessary icons to sprite.</li>
+          <!-- 2. Add button with 2 svg, also add accessibility -->
+          <li>
+            Create simplest markup for burger button
+            <ul>
+              <li>
+                <div>
+                  &lt;button type="button" class="menu-button"&gt;
+                  <div style="margin-left: 20px">
+                    &lt;svg width="40" height="40"&gt;
+                    <div style="margin-left: 20px">
+                      <div>
+                        &lt;use class="icon-menu"
+                        href="./images/sprite.svg#icon-menu"&gt;&lt;/use&gt;
+                      </div>
+                      <div>
+                        &lt;use class="icon-close"
+                        href="./images/sprite.svg#icon-close"&gt;&lt;/use&gt;
+                      </div>
+                    </div>
+                    &lt;/svg&gt;
+                  </div>
+                  &lt;/button&gt;
+                </div>
+              </li>
+              <li style="background-color: #e6ffea">
+                Also don't forget about accessibility
+                <div>&lt;svg aria-label="Mobile menu switch"&gt;</div>
+              </li>
+            </ul>
+          </li>
+          <!-- 3. Add basically styles for button -->
+          <li>
+            Styles for button
+            <ul>
+              <li>
+                Add basically styles
+                <div>
+                  .menu-button {
+                  <div style="margin-left: 20px">
+                    <div>display: inline-flex;</div>
+                    <div>margin: 0;</div>
+                    <div>padding: 0;</div>
+                    <div>border: none;</div>
+                    <div>background-color: transparent;</div>
+                  </div>
+                  }
+                </div>
+              </li>
+              <li>
+                Hide close-icon
+                <div>
+                  .menu-button .icon-close {
+                  <div style="margin-left: 20px">display: none;</div>
+                  }
+                </div>
+              </li>
+              <li>
+                When additional class "is-open" added
+                <ul>
+                  <li>
+                    Show close-icon
+                    <div>
+                      .menu-button.is-open .icon-close {
+                      <div style="margin-left: 20px">display: block;</div>
+                      }
+                    </div>
+                  </li>
+                  <li>
+                    Hide "icon-menu"
+                    <div>
+                      .menu-button.is-open .icon-menu {
+                      <div style="margin-left: 20px">display: none;</div>
+                      }
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- 4. Add data attribute in markup and js -->
+          <li>
+            <ul>
+              <li>
+                Add data attribute for button & js for icons toggling
+                <ul>
+                  <li>
+                    <div>
+                      &lt;body&gt;
+                      <div>...</div>
+                      &lt;button type="button" class="menu-button"
+                      <span style="color: blue">data-menu-button</span>&gt;
+                      <div style="margin-left: 20px">
+                        &lt;svg width="40" height="40" aria-label="Mobile menu
+                        switch"&gt;
+                        <div style="margin-left: 20px">
+                          <div>
+                            &lt;use class="icon-menu"
+                            href="./images/sprite.svg#icon-menu"&gt;&lt;/use&gt;
+                          </div>
+                          <div>
+                            &lt;use class="icon-close"
+                            href="./images/sprite.svg#icon-close"&gt;&lt;/use&gt;
+                          </div>
+                        </div>
+                        &lt;/svg&gt;
+                      </div>
+                      &lt;/button&gt;
+                      <div>...</div>
+                      <!--  -->
+                      <div>
+                        (() => {
+                        <div style="margin-left: 20px">
+                          const menuBtnRef =
+                          document.querySelector('[data-menu-button]');
+                          <div>
+                            menuBtnRef.addEventListener('click', () => {
+                            <div style="margin-left: 20px">
+                              menuBtnRef.classList.toggle('is-open');
+                            </div>
+                            <div>});</div>
+                          </div>
+                        </div>
+                        })();
+                      </div>
+                      <!--  -->
+                      &lt;/body&gt;
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- 5. Additional accessibility point -->
+          <li style="background-color: #e6ffea">
+            Additional accessibility point, add aria-expanded attribute, that
+            READERS tell user about menu opened or closed
+            <div>
+              <div>...</div>
+              &lt;button type="button" class="menu-button"
+              <span style="color: blue">aria-expanded="false"</span>
+              data-menu-button&gt;
+              <div style="margin-left: 20px">
+                &lt;svg width="40" height="40" aria-label="Mobile menu
+                switch"&gt;
+                <div style="margin-left: 20px">
+                  <div>
+                    &lt;use class="icon-menu"
+                    href="./images/sprite.svg#icon-menu"&gt;&lt;/use&gt;
+                  </div>
+                  <div>
+                    &lt;use class="icon-close"
+                    href="./images/sprite.svg#icon-close"&gt;&lt;/use&gt;
+                  </div>
+                </div>
+                &lt;/svg&gt;
+              </div>
+              &lt;/button&gt;
+              <div>...</div>
+              <!--  -->
+              <div>
+                (() => {
+                <div style="margin-left: 20px">
+                  const menuBtnRef =
+                  document.querySelector('[data-menu-button]');
+                  <div>
+                    menuBtnRef.addEventListener('click', () => {
+                    <div style="margin-left: 20px">
+                      <div style="color: blue">
+                        const expanded =
+                        menuBtnRef.getAttribute('aria-expanded') === 'true' ||
+                        false;
+                      </div>
+                      menuBtnRef.classList.toggle('is-open');
+                      <div style="color: blue">
+                        menuBtnRef.setAttribute('aria-expanded', !expanded);
+                      </div>
+                    </div>
+                    <div>});</div>
+                  </div>
+                </div>
+                })();
+              </div>
+              <!--  -->
+            </div>
+          </li>
+          <!-- 6. Add some markup of menu content after out button-->
+          <li>
+            Add some markup of menu content after out button & fulfill js
+            <ul>
+              <li>
+                <div>
+                  &lt;div class="mob-menu-container" data-menu&gt;Menu
+                  content&lt;/div&gt;
+                </div>
+              </li>
+              <li>
+                <!--  -->
+                <div>
+                  (() => {
+                  <div style="margin-left: 20px">
+                    const menuBtnRef =
+                    document.querySelector('[data-menu-button]');
+                    <div style="color: blue">
+                      const mobileMenuRef =
+                      document.querySelector('[data-menu]');
+                    </div>
+                    <div>
+                      menuBtnRef.addEventListener('click', () => {
+                      <div style="margin-left: 20px">
+                        <div>
+                          const expanded =
+                          menuBtnRef.getAttribute('aria-expanded') === 'true' ||
+                          false;
+                        </div>
+                        menuBtnRef.classList.toggle('is-open');
+                        <div>
+                          menuBtnRef.setAttribute('aria-expanded', !expanded);
+                        </div>
+                        <div style="color: blue">
+                          mobileMenuRef.classList.toggle('is-open');
+                        </div>
+                      </div>
+                      <div>});</div>
+                    </div>
+                  </div>
+                  })();
+                </div>
+                <!--  -->
+              </li>
+              <li>
+                Also add some basically styles for mob-menu-container, that
+                positioned absolutely for header, so make header: relative;
+                <div>
+                  .mob-menu-container {
+                  <div style="margin-left: 20px">
+                    <div>position: absolute;</div>
+                    <div>top: 100%;</div>
+                    <div>left: 0;</div>
+                    <div>width: 100%;</div>
+                    <div>height: 250px;</div>
+                    <br />
+                    <div>display: none;</div>
+                    <br />
+                    <div>background-color: palegoldenrod;</div>
+                    <div>padding: 20px;</div>
+                    <div>text-align: center;</div>
+                    <div>font-size: 20px;</div>
+                    <br />
+                    <div>
+                      &.is-open {
+                      <div style="margin-left: 20px">display: block;</div>
+                      }
+                    </div>
+                  </div>
+                  }
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- 7. Connect menu with button for accessibility -->
+          <li style="background-color: #e6ffea">
+            Connect menu with button for accessibility
+            <ul>
+              <li>
+                <div>
+                  <!--  -->
+                  &lt;div class="mob-menu-container"
+                  <span style="color: blue">id="menu-container"</span>
+                  data-menu&gt; Menu content &lt;/div&gt;
+                  <!--  -->
+                </div>
+              </li>
+              <li>
+                <!--  -->
+                <!--  -->
+                <div>
+                  <!--  -->
+                  &lt;button
+                  <div style="margin-left: 20px">
+                    <div>type="button"</div>
+                    <div>class="menu-button"</div>
+                    <div>aria-expanded="false"</div>
+                    <div>
+                      <span style="color: blue"
+                        >aria-controls="menu-container"</span
+                      >
+                    </div>
+                    <div>data-menu-button</div>
+                  </div>
+                  &gt;
+                  <div style="margin-left: 20px">...</div>
+                  &lt;/button&gt;
+                  <!--  -->
+                </div>
+                <!--  -->
+                <!--  -->
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </footer>
+
+    <script src="./js/responsive.js"></script>
+  </body>
+</html>

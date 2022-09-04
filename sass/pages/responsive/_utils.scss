@@ -1,0 +1,47 @@
+.responsive {
+  .list {
+    list-style: none;
+    outline: 3px solid red;
+
+    li {
+      padding: 10px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  // users
+  .users li:first-child {
+    background-color: tomato;
+  }
+
+  .users li:nth-child(2) {
+    background-color: #006400;
+  }
+
+  .users li:nth-child(3) {
+    background-color: teal;
+  }
+  .users li:nth-child(4) {
+    background-color: #556b2f;
+  }
+  .users li:nth-child(5) {
+    background-color: #6a5acd;
+  }
+  .users li:nth-child(6) {
+    background-color: #ff8c00;
+  }
+
+  // groups
+  .groups li:nth-child(1) {
+    background-color: blue;
+  }
+  .groups li:nth-child(2) {
+    background-color: #7fff00;
+  }
+  .groups li:nth-child(3) {
+    background-color: brown;
+  }
+}

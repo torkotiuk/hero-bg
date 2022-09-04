@@ -1,0 +1,25 @@
+.responsive {
+  .users {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -5px;
+    }
+
+    @media screen and (max-width: 767px) {
+      &__item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__item {
+      @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 4 * 5px) / 2);
+        margin: 5px;
+      }
+      @media screen and (min-width: 1140px) {
+        flex-basis: calc((100% - 6 * 5px) / 3);
+      }
+    }
+  }
+}
