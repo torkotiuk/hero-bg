@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -60,7 +64,7 @@
               <li>Create button to open modal</li>
               <!-- 2. Add backdrop -->
               <li>
-                Create &lt;div class=backdrop&gt; &lt;/div&gt;
+                Create &lt;div class="backdrop"&gt; &lt;/div&gt;
                 <ul>
                   <li>
                     .backdrop {
@@ -70,9 +74,18 @@
                     <span class="guide__backdrop-style">width: 100%;</span>
                     <span class="guide__backdrop-style">height: 100%;</span>
                     <span class="guide__backdrop-style"
+                      >padding: 20px 10px;</span
+                    >
+                    <span class="guide__backdrop-style">
+                      overflow-y: scroll;</span
+                    >
+                    <span class="guide__backdrop-style"
                       >background-color: rgba(255, 165, 0, 0.5)</span
                     >
                     }
+                  </li>
+                  <li>
+                    <span> body.modal-open { overflow: hidden; } </span>
                   </li>
                 </ul>
               </li>
@@ -82,31 +95,41 @@
                 content, like
                 <span class="guide__modal">&lt;div class="backdrop"&gt;</span>
                 <span class="guide__modal--mg">&lt;div class="modal"&gt;</span>
+                <span class="guide__modal--mg">Modal content</span>
                 <span class="guide__modal--mg">&lt;/div&gt;</span>
                 <span class="guide__modal">&lt;/div&gt;</span>
 
                 <ul>
                   <li>
                     .modal {
-                    <span class="guide__modal">position: absolute;</span>
-                    <span class="guide__modal">top: 50%;</span>
-                    <span class="guide__modal">left: 50%;</span>
-                    <span class="guide__modal"
-                      >transform: translate(-50%, -50%);</span
-                    >
-
-                    <span class="guide__modal">width: 600px;</span>
-                    <span class="guide__modal">height: 400px;</span>
                     <span class="guide__modal">background-color: white;</span>
+                    <span class="guide__modal">width: 600px;</span>
+                    <div class="guide__modal--mg">
+                      <span class="guide__modal"
+                        >@media screen and (min-width: 768px) {</span
+                      >
+
+                      <div class="guide__modal--mg">
+                        <span class="guide__modal">position: absolute;</span>
+                        <span class="guide__modal">top: 50%;</span>
+                        <span class="guide__modal">left: 50%;</span>
+                        <span class="guide__modal"
+                          >transform: translate(-50%, -50%);</span
+                        >
+
+                        <span class="guide__modal">width: 600px;</span>
+                        <span class="guide__modal">height: 400px;</span>
+                      </div>
+                      <span class="guide__modal">}</span>
+                    </div>
                     }
                   </li>
                 </ul>
               </li>
-              <!-- 4. Add content -->
-              <li>Add necessary content ot modal</li>
-              <!-- 5. Add close button -->
+
+              <!-- 4. Add close button -->
               <li>Add close button</li>
-              <!-- 6. backdrop--is-hidden -->
+              <!-- 5. backdrop--is-hidden -->
               <li>
                 Add <b>.backdrop.is-hidden</b> (or .backdrop--is-hidden if we
                 use BEM) class for div with backdrop, like
@@ -119,7 +142,7 @@
                   </li>
                 </ul>
               </li>
-              <!-- 7. Add JS -->
+              <!-- 6. Add JS -->
               <li>
                 Add JS script:
                 <ul>
@@ -163,9 +186,13 @@
                     <br />
                     <br />
                     function logBackdropClick() {
+                    <span class="guide__js guide__modal--mg">
+                      document.body.classList.toggle("modal-open");</span
+                    >
                     <span class="guide__js guide__modal--mg"
                       >console.log('This is a click to the backdrop');</span
                     >
+
                     }
                   </li>
                   <!-- data attributes -->

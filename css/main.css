@@ -358,19 +358,6 @@ a {
   pointer-events: none;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 300px;
-  min-width: 400px;
-  padding: 15px;
-  background-color: #fff;
-  font-size: 24px;
-  opacity: 1;
-}
-
 .guide-modal {
   font-size: 24px;
   background-color: #e4ffea;
@@ -579,6 +566,7 @@ a {
   background-color: rgba(39, 255, 128, 0.5);
   /* opacity: 1; */
   transition: opacity 250ms linear;
+  padding: 20px 10px;
 }
 
 .backdrop--is-hidden {
@@ -591,16 +579,23 @@ a {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  min-height: 300px;
-  min-width: 400px;
   padding: 15px;
-  background-color: #fff;
+  min-width: 100%;
   font-size: 24px;
-  transition: transform 250ms linear;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-height: 300px;
+    min-width: 400px;
+    background-color: #fff;
+    transition: transform 250ms linear;
+  }
 }
 
 .scene {
