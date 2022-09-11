@@ -103,7 +103,7 @@
                   <li>
                     .modal {
                     <span class="guide__modal">background-color: white;</span>
-                    <span class="guide__modal">width: 600px;</span>
+                    <span class="guide__modal">width: 100%;</span>
                     <div class="guide__modal--mg">
                       <span class="guide__modal"
                         >@media screen and (min-width: 768px) {</span
@@ -179,6 +179,9 @@
                     <br />
                     <br />
                     function toggleModal() {
+                    <span class="guide__js guide__modal--mg">
+                      document.body.classList.toggle("modal-open");</span
+                    >
                     <span class="guide__js guide__modal--mg"
                       >refs.backdrop.classList.toggle('backdrop--is-hidden');</span
                     >
@@ -186,9 +189,6 @@
                     <br />
                     <br />
                     function logBackdropClick() {
-                    <span class="guide__js guide__modal--mg">
-                      document.body.classList.toggle("modal-open");</span
-                    >
                     <span class="guide__js guide__modal--mg"
                       >console.log('This is a click to the backdrop');</span
                     >
