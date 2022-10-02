@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body class="body__picture">
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__set list">
+              <li class="nav__item">
+                <a
+                  style="color: white"
+                  class="nav__link current"
+                  href="./responsive.html"
+                  >Back 💨</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="container">
+            <p>
+              Tag <b>picture</b> allows to download a pic in different formats.
+            </p>
+
+            <p>Browsers automatically download webp formats picture.</p>
+          </div>
+        </section>
+
+        <section class="section picture__guide">
+          <div class="container">
+            <h2>PICTURE guide (first technique):</h2>
+            <ul>
+              <li>
+                Make every size (320px, 480px, etc.) of pictures to webp format
+                by squoosh.app
+              </li>
+              <li>
+                Make markup like
+                <!--  -->
+                <!--  -->
+                <div>
+                  &lt;picture&gt;
+                  <div style="margin-left: 20px">
+                    <!--  -->
+                    &lt;source
+                    <div style="margin-left: 20px">
+                      srcset="
+                      <div>./assets/images/cat-320.webp 320w,</div>
+                      <div>./assets/images/cat-640.webp 640w,</div>
+                      <div>./assets/images/cat-960.webp 960w</div>
+                      <div>"</div>
+                      <div>type="image/webp"</div>
+                    </div>
+
+                    /&gt;
+                  </div>
+
+                  <!-- image by default -->
+                  <div>
+                    &lt;img
+                    <div style="margin-left: 20px">
+                      <div>src="./assets/images/cat-320.jpg"</div>
+                      <div>alt="Cat"</div>
+                      <div>srcset="</div>
+                      <div>./assets/images/cat-320.jpg 320w,</div>
+                      <div>./assets/images/cat-640.jpg 640w,</div>
+                      <div>./assets/images/cat-960.jpg 960w</div>
+                      <div>"</div>
+                      <div>width="400"</div>
+                    </div>
+
+                    /&gt;
+                  </div>
+                  <!--  -->
+                </div>
+                &lt;/picture&gt;
+                <!--  -->
+                <!--  -->
+              </li>
+              <li>
+                <!--  -->
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/cat-320.webp 320w,
+                      ./assets/images/cat-640.webp 640w,
+                      ./assets/images/cat-960.webp 960w
+                    "
+                    type="image/webp"
+                  />
+
+                  <!-- image by default -->
+                  <img
+                    src="./assets/images/cat-320.jpg"
+                    alt="Cat"
+                    srcset="
+                      ./assets/images/cat-320.jpg 320w,
+                      ./assets/images/cat-640.jpg 640w,
+                      ./assets/images/cat-960.jpg 960w
+                    "
+                    width="400"
+                  />
+                </picture>
+                <!--  -->
+              </li>
+            </ul>
+
+            <h2>Picture guide (second technique):</h2>
+            <p>Different images for different screens</p>
+            <ul>
+              <li>
+                Download pics from template (in our example cat-portrait.jpg -
+                for mobile, cat-landscape-normal.jpg - for tablet,
+                cat-landscape-wide.jpg - for desktop)
+              </li>
+              <li>
+                <!--  -->
+                <picture>
+                  <img
+                    src="./assets/images/cat-landscape-normal.jpg"
+                    alt="Cat"
+                  />
+                </picture>
+                <!--  -->
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container">
+          <p>
+            Footer pressed to bottom according to point 3 of
+            <a
+              target="_blank"
+              href="https://torkotiuk.github.io/empty-proj-no-bundlers/"
+              >this link</a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

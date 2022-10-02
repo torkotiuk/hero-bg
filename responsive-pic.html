@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measure-markup</title>
+    <link rel="stylesheet" href="./css/responsive-pic.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__set list">
+              <li class="nav__item">
+                <a class="nav__link current" href="./responsive.html">Back </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="section resp-pic">
+          <div class="container">
+            <h2>Responsive images</h2>
+
+            <div class="thumb">
+              <img src="./assets/images/cat-640.jpg" alt="Cat" />
+              <p>
+                This pic is responsive till the end of the responsive container
+                480px.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2>Guide</h2>
+            <ul>
+              <li>
+                Make in every project for tag <b>img</b>
+                <ul>
+                  <li>
+                    img { display: block; max-width: 100%; height: auto; }
+                    <p>
+                      P.S. <b>max-with</b> - use for pic-s not more than pic-s
+                      size, means if we made <b>width</b> we will get pic-s in
+                      responsive blocks bigger than real size.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Go to
+                <a target="_blank" href="https://www.mydevice.io/"
+                  >mydevice.io</a
+                >
+                for measure of your <b>CSS pixel-ratio</b> screen. For screens
+                with this value much than 1, we have to prepare bigger pic-s.
+              </li>
+              <!-- Approach 1 -->
+              <li>
+                <b
+                  >Approach 1. with fixed &lt;img width=""&gt;, usually in
+                  adaptive markup</b
+                >
+                Prepare pic-s for different screen sizes, means export from f.e.
+                Figma and markup it like. (<a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=570s"
+                  >How to prepare bigger (for retina) pic-s with Figma.</a
+                >)
+                <p>
+                  So browser downloads pic for selected screen with CSS
+                  pixel-ratio
+                </p>
+                <ul>
+                  <li>
+                    <!--  -->
+                    &lt;img
+                    <div>
+                      <div>srcset="</div>
+                      <div style="color: rgb(35, 0, 200)">
+                        <div>./assets/images/cat-320.jpg 1x,</div>
+                        <div>./assets/images/cat-640.jpg 2x,</div>
+                        <div>./assets/images/cat-960.jpg 3x</div>
+                      </div>
+                      <div>"</div>
+                      <div>src="./assets/images/cat-320.jpg"</div>
+                      <div>alt="Cat"</div>
+                      <div style="color: rgb(35, 0, 200)">width="320"</div>
+                    </div>
+                    /&gt;
+                    <!--  -->
+                  </li>
+                </ul>
+              </li>
+              <!-- Approach 2 -->
+              <li>
+                <b> Approach 2.</b> Browser takes nearest for screen quality
+                pic.
+                <!--  -->
+                &lt;img
+                <div>
+                  <div>srcset="</div>
+                  <div style="color: rgb(175, 0, 0)">
+                    <div>./assets/images/cat-320.jpg 320w,</div>
+                    <div>./assets/images/cat-640.jpg 640w,</div>
+                    <div>./assets/images/cat-960.jpg 960w</div>
+                    <div>./assets/images/cat-1280.jpg 1280w</div>
+                  </div>
+                  <div>"</div>
+                  <div>src="./assets/images/cat-320.jpg"</div>
+                  <div>alt="Cat"</div>
+                  <div>
+                    sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw,
+                    100vw"
+                  </div>
+                </div>
+                /&gt;
+                <!--  -->
+                <p>
+                  Attribute sizes="" helps us optimize of pic-s selecting, f.e.
+                  (min-width: 800px) 50vw - means from 800px we will show pic
+                  not much than 50% of view port.
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=1885s"
+                    >More explanation in webinar.</a
+                  >
+                </p>
+              </li>
+              <li>
+                Try use <b>lazy</b> attribute in markups
+                <ul>
+                  <li>
+                    &lt;img loading="lazy"&gt; - images don't paint when they
+                    aren't in screen
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b style="color: red"
+                  >Good practice of page downloading is 1,5 - 2 s.</b
+                >
+                <p>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=3450s"
+                    >Calculate web-performance with devTools help explanation -
+                    LightHouse TAB</a
+                  >
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer><div class="container">Footer</div></footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

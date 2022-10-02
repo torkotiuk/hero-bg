@@ -1,6 +1,8 @@
 // base
 @import './base/_base';
 @import './base/section';
+@import './base/container';
+@import './base/wrapper';
 
 // components
 @import './components/header';
@@ -49,4 +51,5 @@
 @import './pages/responsive/users';
 @import './pages/responsive/groups';
 @import './pages/responsive/burger-menu/burger-menu';
+@import './pages/responsive-picture';
 // --- responsive page --- E N D ---
