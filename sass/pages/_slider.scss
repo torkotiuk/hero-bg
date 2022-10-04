@@ -1,0 +1,43 @@
+.slider {
+  &__list-wrap {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    // outline: 1px solid red;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    // margin-right: 10px;
+  }
+}
+
+.no-js {
+  // make width 200px, b/c all downloaded pictures have 200px;
+  width: 200px;
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .slider__list-wrap {
+    overflow: initial;
+  }
+
+  .slider__list {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    outline: 1px solid red;
+
+    .slider__item {
+      scroll-snap-align: center;
+    }
+  }
+}
